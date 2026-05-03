@@ -77,6 +77,14 @@ Gmail SMTP Alert System
 └── README.md
 ```
 
+## Demo
+
+**Authorized access** — green LED, servo opens, welcome message on LCD:
+![Authorized Access](demo-authorized.jpg)
+
+**Unauthorized access** — red LED, buzzer alarm, warning on LCD:
+![Unauthorized Access](demo-unauthorized.jpg)
+
 ## Setup
 
 1. Upload `system2_rfid_full.ino` to Arduino via Arduino IDE
