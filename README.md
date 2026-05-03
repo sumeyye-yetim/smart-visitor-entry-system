@@ -80,10 +80,10 @@ Gmail SMTP Alert System
 ## Demo
 
 **Authorized access** — green LED, servo opens, welcome message on LCD:
-![Authorized Access](demo-authorized.jpg)
+![Authorized Access](demo-authorized.png)
 
 **Unauthorized access** — red LED, buzzer alarm, warning on LCD:
-![Unauthorized Access](demo-unauthorized.jpg)
+![Unauthorized Access](demo-unauthorized.png)
 
 ## Setup
 
