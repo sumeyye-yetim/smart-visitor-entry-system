@@ -5,17 +5,13 @@ with a web-based visitor management panel. Built during internship at
 CYF TECH Software (March 2026).
 
 ## System Architecture
-
-| Layer | Technology |
-|---|---|
-| Hardware | Arduino Uno (C++) |
-| Serial Communication | USB Serial Port (9600 baud) |
-| Middleware | Python + pyserial (bridge.py) |
-| Backend API | PHP REST API (rfid_api.php) |
-| Database | MySQL (rfid_cards + visitors tables) |
-| Notification | PHPMailer + Gmail SMTP (TLS) |
-| Web Panel | HTML + CSS + JavaScript |
-
+```
+Arduino (C++) → Serial Port → Python Bridge → PHP REST API → MySQL Database
+↓
+Web Admin Panel
+↓
+Gmail SMTP Alert System
+```
 ## Features
 
 - RFID card-based access control (authorized / unauthorized scenarios)
