@@ -57,21 +57,22 @@ Gmail SMTP Alert System
 
 ```
 ├── arduino/
-│   ├── system1_pir_servo.ino      # Prototype 1 (PIR + Servo + LCD)
-│   ├── system2_rfid_full.ino      # Prototype 2 (Full RFID integration)
-│   └── unit_tests/                # Individual component test codes
+│   ├── prototypes/
+│   │   ├── system1_pir_servo.ino
+│   │   └── system2_rfid_full.ino
+│   └── unit_tests/
 │       ├── led_test.ino
 │       ├── servo_test.ino
 │       ├── lcd_test.ino
 │       ├── pir_test.ino
 │       └── rc522_test.ino
 ├── backend/
-│   ├── bridge.py                  # Python middleware (Serial → API)
-│   ├── rfid_api.php               # Main API endpoint
-│   ├── rfid_cards.php             # Card list (Admin)
-│   ├── rfid_card_create.php       # Add new card
-│   ├── rfid_card_update.php       # Update card
-│   └── rfid_card_delete.php       # Delete card
+│   ├── bridge.py
+│   ├── rfid_api.php
+│   ├── rfid_cards.php
+│   ├── rfid_card_create.php
+│   ├── rfid_card_update.php
+│   └── rfid_card_delete.php
 ├── circuit-diagram.png
 └── README.md
 ```
