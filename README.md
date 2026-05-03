@@ -5,11 +5,16 @@ with a web-based visitor management panel. Built during internship at
 CYF TECH Software (March 2026).
 
 ## System Architecture
-Arduino (C++) → Serial Port → Python Bridge → PHP REST API → MySQL Database
-↓
-Web Admin Panel
-↓
-Gmail SMTP Alert System
+
+| Layer | Technology |
+|---|---|
+| Hardware | Arduino Uno (C++) |
+| Serial Communication | USB Serial Port (9600 baud) |
+| Middleware | Python + pyserial (bridge.py) |
+| Backend API | PHP REST API (rfid_api.php) |
+| Database | MySQL (rfid_cards + visitors tables) |
+| Notification | PHPMailer + Gmail SMTP (TLS) |
+| Web Panel | HTML + CSS + JavaScript |
 
 ## Features
 
@@ -53,24 +58,22 @@ Gmail SMTP Alert System
 6. If unauthorized → red LED, buzzer alarm, instant email alert to admin
 
 ## File Structure
-├── arduino/
-│   ├── system1_pir_servo.ino       # Prototype 1 (PIR + Servo + LCD)
-│   ├── system2_rfid_full.ino       # Prototype 2 (Full RFID integration)
-│   └── unit_tests/                 # Individual component test codes
-│       ├── led_test.ino
-│       ├── servo_test.ino
-│       ├── lcd_test.ino
-│       ├── pir_test.ino
-│       └── rc522_test.ino
-├── backend/
-│   ├── bridge.py                   # Python middleware (Serial → API)
-│   ├── rfid_api.php                # Main API endpoint
-│   ├── rfid_cards.php              # Card list (Admin)
-│   ├── rfid_card_create.php        # Add new card
-│   ├── rfid_card_update.php        # Update card
-│   └── rfid_card_delete.php        # Delete card
-├── circuit-diagram.png
-└── README.md
+
+**arduino/**
+- `system1_pir_servo.ino` — Prototype 1: PIR + Servo + LCD
+- `system2_rfid_full.ino` — Prototype 2: Full RFID integration
+- `unit_tests/` — Individual component tests (LED, Servo, LCD, PIR, RC522)
+
+**backend/**
+- `bridge.py` — Python middleware (Serial Port → REST API)
+- `rfid_api.php` — Main API endpoint
+- `rfid_cards.php` — Card list (Admin panel)
+- `rfid_card_create.php` — Add new card
+- `rfid_card_update.php` — Update card
+- `rfid_card_delete.php` — Delete card
+
+**Other**
+- `circuit-diagram.png` — Full wiring diagram
 
 ## Setup
 
