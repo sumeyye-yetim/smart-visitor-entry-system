@@ -59,21 +59,26 @@ CYF TECH Software (March 2026).
 
 ## File Structure
 
-**arduino/**
-- `system1_pir_servo.ino` — Prototype 1: PIR + Servo + LCD
-- `system2_rfid_full.ino` — Prototype 2: Full RFID integration
-- `unit_tests/` — Individual component tests (LED, Servo, LCD, PIR, RC522)
-
-**backend/**
-- `bridge.py` — Python middleware (Serial Port → REST API)
-- `rfid_api.php` — Main API endpoint
-- `rfid_cards.php` — Card list (Admin panel)
-- `rfid_card_create.php` — Add new card
-- `rfid_card_update.php` — Update card
-- `rfid_card_delete.php` — Delete card
-
-**Other**
-- `circuit-diagram.png` — Full wiring diagram
+```
+├── arduino/
+│   ├── system1_pir_servo.ino      # Prototype 1 (PIR + Servo + LCD)
+│   ├── system2_rfid_full.ino      # Prototype 2 (Full RFID integration)
+│   └── unit_tests/                # Individual component test codes
+│       ├── led_test.ino
+│       ├── servo_test.ino
+│       ├── lcd_test.ino
+│       ├── pir_test.ino
+│       └── rc522_test.ino
+├── backend/
+│   ├── bridge.py                  # Python middleware (Serial → API)
+│   ├── rfid_api.php               # Main API endpoint
+│   ├── rfid_cards.php             # Card list (Admin)
+│   ├── rfid_card_create.php       # Add new card
+│   ├── rfid_card_update.php       # Update card
+│   └── rfid_card_delete.php       # Delete card
+├── circuit-diagram.png
+└── README.md
+```
 
 ## Setup
 
